@@ -30,6 +30,7 @@ while running:
             if is_rectangle_clicked(event.pos, yes_message.rect):
                 game_status = True
                 attempts = 0
+                attempts_message.set_message("ATTEMPTS: " + str(attempts))
                 # Разброс карточек
                 all_cards = []
                 for idx1 in range(4):
