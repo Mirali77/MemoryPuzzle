@@ -29,6 +29,7 @@ while running:
         elif event.type == pygame.MOUSEBUTTONDOWN and event.button == 1 and not game_status:
             if is_rectangle_clicked(event.pos, yes_message.rect):
                 game_status = True
+                attempts = 0
                 # Разброс карточек
                 all_cards = []
                 for idx1 in range(4):
@@ -43,7 +44,6 @@ while running:
                             pos1 = random.randint(0, 3)
                             pos2 = random.randint(0, 3)
                             all_cards[idx1][idx2], all_cards[pos1][pos2] = all_cards[pos1][pos2], all_cards[idx1][idx2]
-
                 # Установка расположения карточек
                 for idx1 in range(4):
                     for idx2 in range(4):
